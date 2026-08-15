@@ -18,21 +18,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-</head>
 
-<body class="bg-[#FFFDF9] text-[#2D211C] font-['DM_Sans'] overflow-x-hidden">
+<body class="overflow-x-hidden bg-[#FFFDF9] font-['DM_Sans'] text-[#2D211C]">
 
 
-    <!-- =================================================
-         NAVBAR
-    ================================================== -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
     <header
         id="header"
@@ -43,7 +41,7 @@
             class="mx-auto flex h-24 w-[90%] max-w-7xl items-center justify-between"
         >
 
-            <!-- LOGO -->
+            <!-- BRAND -->
 
             <a
                 href="{{ url('/') }}"
@@ -53,13 +51,12 @@
 
                 <div
                     id="logoMark"
-                    class="grid size-11 place-items-center rounded-full border border-white/40 font-['Playfair_Display'] text-2xl transition"
+                    class="grid size-11 place-items-center rounded-full border border-white/40 font-['Playfair_Display'] text-2xl transition duration-300"
                 >
                     ☾
                 </div>
 
-                <div id="logoText">
-
+                <div>
                     <span
                         class="block font-['Playfair_Display'] text-2xl tracking-[0.25em]"
                     >
@@ -67,11 +64,10 @@
                     </span>
 
                     <span
-                        class="block text-[8px] tracking-[0.24em] opacity-80"
+                        class="block text-[8px] uppercase tracking-[0.24em] opacity-80"
                     >
-                        PÂTISSERIE & BAKEHOUSE
+                        Pâtisserie & Bakehouse
                     </span>
-
                 </div>
 
             </a>
@@ -83,28 +79,28 @@
 
                 <a
                     href="{{ url('/') }}"
-                    class="nav-link text-sm text-white transition hover:text-[#E8C992]"
+                    class="nav-link border-b border-[#D6A760] pb-1 text-sm text-[#E8C992]"
                 >
                     Home
                 </a>
 
                 <a
                     href="{{ url('/about') }}"
-                    class="nav-link text-sm text-white transition hover:text-[#E8C992]"
+                    class="nav-link text-sm text-white transition duration-300 hover:text-[#E8C992]"
                 >
                     About
                 </a>
 
                 <a
                     href="{{ url('/services') }}"
-                    class="nav-link text-sm text-white transition hover:text-[#E8C992]"
+                    class="nav-link text-sm text-white transition duration-300 hover:text-[#E8C992]"
                 >
                     Services
                 </a>
 
                 <a
                     href="{{ url('/contact') }}"
-                    class="nav-link text-sm text-white transition hover:text-[#E8C992]"
+                    class="nav-link text-sm text-white transition duration-300 hover:text-[#E8C992]"
                 >
                     Contact
                 </a>
@@ -112,7 +108,7 @@
                 <a
                     id="navButton"
                     href="{{ url('/contact') }}"
-                    class="rounded-full border border-white/50 px-5 py-3 text-xs font-semibold text-white transition hover:border-[#D6A760] hover:bg-[#D6A760] hover:text-[#2D211C]"
+                    class="rounded-full border border-white/50 px-5 py-3 text-xs font-semibold text-white transition duration-300 hover:border-[#D6A760] hover:bg-[#D6A760] hover:text-[#2D211C]"
                 >
                     Order Inquiry
                 </a>
@@ -125,37 +121,42 @@
             <button
                 id="menuToggle"
                 type="button"
-                class="relative z-[70] flex flex-col gap-1.5 lg:hidden"
                 aria-label="Toggle navigation"
+                aria-expanded="false"
+                class="relative z-[70] flex flex-col gap-1.5 lg:hidden"
             >
-
                 <span class="menu-line block h-0.5 w-7 bg-white transition-all"></span>
-
                 <span class="menu-line block h-0.5 w-7 bg-white transition-all"></span>
-
                 <span class="menu-line block h-0.5 w-7 bg-white transition-all"></span>
-
             </button>
 
         </div>
 
 
-        <!-- MOBILE MENU -->
+        <!-- MOBILE NAV -->
 
         <div
             id="mobileMenu"
-            class="fixed right-[-100%] top-0 z-[60] flex h-screen w-[80%] max-w-sm flex-col justify-center gap-7 bg-[#F7F0E7] px-10 text-[#2D211C] shadow-2xl transition-all duration-500 lg:hidden"
+            class="fixed right-[-100%] top-0 z-[60] flex h-screen w-[82%] max-w-sm flex-col justify-center gap-7 bg-[#F7F0E7] px-10 text-[#2D211C] shadow-2xl transition-all duration-500 lg:hidden"
         >
 
-            <p
-                class="mb-6 font-['Playfair_Display'] text-3xl tracking-[0.2em]"
-            >
-                LUNÉA
-            </p>
+            <div class="mb-6">
+                <span
+                    class="block font-['Playfair_Display'] text-3xl tracking-[0.2em]"
+                >
+                    LUNÉA
+                </span>
+
+                <span
+                    class="mt-2 block text-[9px] uppercase tracking-[0.2em] text-[#766860]"
+                >
+                    Pâtisserie & Bakehouse
+                </span>
+            </div>
 
             <a
                 href="{{ url('/') }}"
-                class="mobile-link text-xl font-medium"
+                class="mobile-link text-xl font-medium text-[#B96F52]"
             >
                 Home
             </a>
@@ -194,11 +195,12 @@
 
 
 
-    <!-- =================================================
-         HERO
-    ================================================== -->
-
     <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
         <section
             class="relative flex min-h-screen items-center overflow-hidden"
@@ -210,13 +212,17 @@
 
                 <img
                     id="heroImage"
-                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1800&q=85"
-                    alt="Freshly baked artisan croissants"
+                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=2000&q=85"
+                    alt="Fresh artisan croissants"
                     class="h-full w-full scale-110 object-cover"
                 >
 
                 <div
-                    class="absolute inset-0 bg-gradient-to-r from-[#201510]/95 via-[#201510]/70 to-[#201510]/20"
+                    class="absolute inset-0 bg-gradient-to-r from-[#211611]/95 via-[#211611]/70 to-[#211611]/25"
+                ></div>
+
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#211611]/35 via-transparent to-transparent"
                 ></div>
 
             </div>
@@ -228,29 +234,25 @@
                 class="relative z-10 mx-auto w-[90%] max-w-7xl pt-24 text-white"
             >
 
-                <div class="max-w-3xl">
+                <div class="max-w-4xl">
 
                     <div
-                        class="hero-item mb-6 flex translate-y-8 items-center gap-4 text-xs uppercase tracking-[0.3em] text-[#E8C992] opacity-0"
+                        class="hero-item mb-6 flex translate-y-8 items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E8C992] opacity-0"
                     >
-
                         <span class="h-px w-10 bg-[#D6A760]"></span>
 
                         Artisan Pastries · Santa Rosa, Laguna
-
                     </div>
 
 
                     <h1
-                        class="hero-item translate-y-8 font-['Playfair_Display'] text-6xl font-medium leading-[0.95] tracking-tight opacity-0 sm:text-7xl lg:text-[7rem]"
+                        class="hero-item translate-y-8 font-['Playfair_Display'] text-6xl font-medium leading-[0.94] tracking-[-0.03em] opacity-0 sm:text-7xl lg:text-[7.2rem]"
                     >
-
                         A Little Joy,
 
                         <span class="block italic text-[#E8C992]">
                             Baked Daily.
                         </span>
-
                     </h1>
 
 
@@ -258,12 +260,12 @@
                         class="hero-item mt-8 max-w-xl translate-y-8 text-base leading-8 text-white/75 opacity-0 md:text-lg"
                     >
                         Fresh pastries, artisan breads, and handcrafted cakes
-                        made with care in the heart of Santa Rosa.
+                        made with patience and care in the heart of Santa Rosa.
                     </p>
 
 
                     <div
-                        class="hero-item mt-9 flex translate-y-8 flex-wrap gap-4 opacity-0"
+                        class="hero-item mt-10 flex translate-y-8 flex-wrap gap-4 opacity-0"
                     >
 
                         <a
@@ -274,11 +276,12 @@
                             <span>→</span>
                         </a>
 
+
                         <a
                             href="{{ url('/about') }}"
                             class="inline-flex items-center border border-white/50 px-7 py-4 text-sm font-semibold transition duration-300 hover:bg-white hover:text-[#2D211C]"
                         >
-                            Our Story
+                            Discover Our Story
                         </a>
 
                     </div>
@@ -287,13 +290,23 @@
 
             </div>
 
+
+            <!-- SCROLL INDICATOR -->
+
+            <div
+                class="absolute bottom-10 right-[5%] z-10 hidden items-center gap-4 text-[9px] uppercase tracking-[0.3em] text-white/60 md:flex"
+            >
+                Scroll
+                <span class="h-px w-16 bg-white/40"></span>
+            </div>
+
         </section>
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              INTRODUCTION
-        ================================================== -->
+        ====================================================== -->
 
         <section class="bg-[#F7F0E7] py-24 lg:py-32">
 
@@ -308,26 +321,26 @@
                     <div class="overflow-hidden">
 
                         <img
-                            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85"
+                            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1100&q=85"
                             alt="Fresh artisan bread"
-                            class="h-[470px] w-full object-cover transition duration-700 hover:scale-105 md:h-[600px]"
+                            class="h-[470px] w-full object-cover transition duration-700 hover:scale-105 md:h-[610px]"
                         >
 
                     </div>
 
 
                     <div
-                        class="absolute -bottom-8 right-4 flex h-36 w-44 flex-col items-center justify-center bg-[#2D211C] text-center text-white md:-right-8 md:bottom-10"
+                        class="absolute -bottom-8 right-4 flex h-36 w-44 flex-col items-center justify-center bg-[#2D211C] px-4 text-center text-white md:-right-8 md:bottom-12"
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-3xl text-[#E8C992]"
+                            class="font-['Playfair_Display'] text-3xl italic text-[#E8C992]"
                         >
                             Fresh
                         </span>
 
                         <span
-                            class="mt-1 text-[10px] uppercase tracking-[0.2em]"
+                            class="mt-2 text-[9px] uppercase tracking-[0.22em] text-white/70"
                         >
                             Baked Every Day
                         </span>
@@ -342,26 +355,22 @@
                 <div class="reveal-right opacity-0">
 
                     <div
-                        class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                        class="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                     >
-
                         <span class="h-px w-9 bg-[#D6A760]"></span>
 
                         Our Bakehouse
-
                     </div>
 
 
                     <h2
-                        class="font-['Playfair_Display'] text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl"
+                        class="font-['Playfair_Display'] text-4xl font-medium leading-[1.08] sm:text-5xl lg:text-6xl"
                     >
-
                         Made with patience.
 
                         <span class="block italic text-[#B96F52]">
                             Shared with joy.
                         </span>
-
                     </h2>
 
 
@@ -382,10 +391,13 @@
 
                     <a
                         href="{{ url('/about') }}"
-                        class="mt-8 inline-flex items-center gap-3 border-b border-[#2D211C] pb-1 text-sm font-semibold"
+                        class="group mt-8 inline-flex items-center gap-3 border-b border-[#2D211C] pb-1 text-sm font-semibold"
                     >
                         Discover our story
-                        <span>→</span>
+
+                        <span class="transition group-hover:translate-x-1">
+                            →
+                        </span>
                     </a>
 
                 </div>
@@ -396,13 +408,14 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              FEATURED CREATIONS
-        ================================================== -->
+        ====================================================== -->
 
         <section class="bg-[#FFFDF9] py-24 lg:py-32">
 
             <div class="mx-auto w-[90%] max-w-7xl">
+
 
                 <div
                     class="reveal mb-16 flex flex-col justify-between gap-8 opacity-0 lg:flex-row lg:items-end"
@@ -411,26 +424,22 @@
                     <div>
 
                         <div
-                            class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                            class="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                         >
-
                             <span class="h-px w-9 bg-[#D6A760]"></span>
 
                             From Our Kitchen
-
                         </div>
 
 
                         <h2
                             class="font-['Playfair_Display'] text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl"
                         >
-
                             Freshly made,
 
                             <span class="block italic text-[#B96F52]">
                                 beautifully simple.
                             </span>
-
                         </h2>
 
                     </div>
@@ -438,26 +447,27 @@
 
                     <a
                         href="{{ url('/services') }}"
-                        class="inline-flex w-fit items-center gap-3 border-b border-[#2D211C] pb-1 text-sm font-semibold"
+                        class="group inline-flex w-fit items-center gap-3 border-b border-[#2D211C] pb-1 text-sm font-semibold"
                     >
                         View all creations
-                        <span>→</span>
+
+                        <span class="transition group-hover:translate-x-1">
+                            →
+                        </span>
                     </a>
 
                 </div>
 
 
 
-                <!-- CARDS -->
-
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
 
-                    <!-- CROISSANT -->
+                    <!-- CARD 1 -->
 
                     <article class="reveal group opacity-0">
 
-                        <div class="relative h-[430px] overflow-hidden">
+                        <div class="relative h-[440px] overflow-hidden">
 
                             <img
                                 src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=900&q=85"
@@ -466,7 +476,7 @@
                             >
 
                             <span
-                                class="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-[#FFFDF9]/95 text-xs"
+                                class="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-[#FFFDF9]/95 font-['Playfair_Display'] text-sm"
                             >
                                 01
                             </span>
@@ -477,7 +487,7 @@
                         <div class="pt-6">
 
                             <span
-                                class="text-[10px] uppercase tracking-[0.22em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#B96F52]"
                             >
                                 Viennoiserie
                             </span>
@@ -499,20 +509,20 @@
 
 
 
-                    <!-- CAKES -->
+                    <!-- CARD 2 -->
 
                     <article class="reveal group opacity-0">
 
-                        <div class="relative h-[430px] overflow-hidden">
+                        <div class="relative h-[440px] overflow-hidden">
 
                             <img
                                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
-                                alt="Signature cake"
+                                alt="Signature celebration cake"
                                 class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                             >
 
                             <span
-                                class="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-[#FFFDF9]/95 text-xs"
+                                class="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-[#FFFDF9]/95 font-['Playfair_Display'] text-sm"
                             >
                                 02
                             </span>
@@ -523,7 +533,7 @@
                         <div class="pt-6">
 
                             <span
-                                class="text-[10px] uppercase tracking-[0.22em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#B96F52]"
                             >
                                 Celebrations
                             </span>
@@ -545,13 +555,13 @@
 
 
 
-                    <!-- BREAD -->
+                    <!-- CARD 3 -->
 
                     <article
                         class="reveal group opacity-0 md:col-span-2 lg:col-span-1"
                     >
 
-                        <div class="relative h-[430px] overflow-hidden">
+                        <div class="relative h-[440px] overflow-hidden">
 
                             <img
                                 src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&q=85"
@@ -560,7 +570,7 @@
                             >
 
                             <span
-                                class="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-[#FFFDF9]/95 text-xs"
+                                class="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-[#FFFDF9]/95 font-['Playfair_Display'] text-sm"
                             >
                                 03
                             </span>
@@ -571,7 +581,7 @@
                         <div class="pt-6">
 
                             <span
-                                class="text-[10px] uppercase tracking-[0.22em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#B96F52]"
                             >
                                 Daily Bakes
                             </span>
@@ -599,40 +609,38 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              LUNÉA EXPERIENCE
-        ================================================== -->
+        ====================================================== -->
 
         <section class="bg-[#2D211C] py-24 text-white lg:py-32">
 
             <div class="mx-auto w-[90%] max-w-7xl">
 
+
                 <div class="reveal mb-16 max-w-3xl opacity-0">
 
                     <div
-                        class="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#E8C992]"
+                        class="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E8C992]"
                     >
-
                         <span class="h-px w-9 bg-[#D6A760]"></span>
 
                         The LUNÉA Experience
-
                     </div>
 
 
                     <h2
                         class="font-['Playfair_Display'] text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl"
                     >
-
                         Thoughtful baking from
 
                         <span class="block italic text-[#E8C992]">
                             our kitchen to your table.
                         </span>
-
                     </h2>
 
                 </div>
+
 
 
                 <div
@@ -640,23 +648,25 @@
                 >
 
 
-                    <article class="reveal py-10 pr-8 opacity-0">
+                    <article
+                        class="reveal py-10 pr-8 opacity-0"
+                    >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-xl text-[#D6A760]"
                         >
                             01
                         </span>
 
                         <h3
-                            class="mt-6 font-['Playfair_Display'] text-3xl font-medium"
+                            class="mt-7 font-['Playfair_Display'] text-3xl font-medium"
                         >
                             Freshly Baked
                         </h3>
 
-                        <p class="mt-4 leading-7 text-white/60">
-                            Our pastries and breads are prepared in small
-                            batches so every visit feels fresh.
+                        <p class="mt-4 max-w-sm leading-7 text-white/60">
+                            Our pastries and breads are prepared in small batches
+                            so every visit feels fresh.
                         </p>
 
                     </article>
@@ -668,18 +678,18 @@
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-xl text-[#D6A760]"
                         >
                             02
                         </span>
 
                         <h3
-                            class="mt-6 font-['Playfair_Display'] text-3xl font-medium"
+                            class="mt-7 font-['Playfair_Display'] text-3xl font-medium"
                         >
                             Thoughtfully Made
                         </h3>
 
-                        <p class="mt-4 leading-7 text-white/60">
+                        <p class="mt-4 max-w-sm leading-7 text-white/60">
                             We focus on flavor, texture, and presentation
                             without rushing the baking process.
                         </p>
@@ -693,18 +703,18 @@
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-xl text-[#D6A760]"
                         >
                             03
                         </span>
 
                         <h3
-                            class="mt-6 font-['Playfair_Display'] text-3xl font-medium"
+                            class="mt-7 font-['Playfair_Display'] text-3xl font-medium"
                         >
                             Made for Sharing
                         </h3>
 
-                        <p class="mt-4 leading-7 text-white/60">
+                        <p class="mt-4 max-w-sm leading-7 text-white/60">
                             From quiet mornings to celebrations, our creations
                             are designed for moments shared with others.
                         </p>
@@ -719,13 +729,14 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              STATS
-        ================================================== -->
+             UPDATED FROM GOLD TO CREAM
+        ====================================================== -->
 
         <section
             id="statsSection"
-            class="bg-[#D6A760] py-14"
+            class="border-b border-[#2D211C]/10 bg-[#F7F0E7] py-16 lg:py-20"
         >
 
             <div
@@ -733,17 +744,21 @@
             >
 
 
-                <div class="reveal py-5 text-center opacity-0">
+                <!-- STAT 1 -->
+
+                <div
+                    class="reveal px-4 py-6 text-center opacity-0 md:px-8"
+                >
 
                     <strong
-                        class="counter block font-['Playfair_Display'] text-4xl font-medium"
+                        class="counter block font-['Playfair_Display'] text-4xl font-medium text-[#2D211C] lg:text-5xl"
                         data-target="6"
                     >
                         0
                     </strong>
 
                     <span
-                        class="text-[10px] uppercase tracking-[0.2em]"
+                        class="mt-2 block text-[9px] font-semibold uppercase tracking-[0.25em] text-[#766860]"
                     >
                         Signature Services
                     </span>
@@ -751,19 +766,22 @@
                 </div>
 
 
+
+                <!-- STAT 2 -->
+
                 <div
-                    class="reveal border-l border-[#2D211C]/20 py-5 text-center opacity-0"
+                    class="reveal border-l border-[#2D211C]/10 px-4 py-6 text-center opacity-0 md:px-8"
                 >
 
                     <strong
-                        class="counter block font-['Playfair_Display'] text-4xl font-medium"
+                        class="counter block font-['Playfair_Display'] text-4xl font-medium text-[#B96F52] lg:text-5xl"
                         data-target="100"
                     >
                         0
                     </strong>
 
                     <span
-                        class="text-[10px] uppercase tracking-[0.2em]"
+                        class="mt-2 block text-[9px] font-semibold uppercase tracking-[0.25em] text-[#766860]"
                     >
                         % Baked With Care
                     </span>
@@ -771,19 +789,22 @@
                 </div>
 
 
+
+                <!-- STAT 3 -->
+
                 <div
-                    class="reveal border-[#2D211C]/20 py-5 text-center opacity-0 md:border-l"
+                    class="reveal border-t border-[#2D211C]/10 px-4 py-6 text-center opacity-0 md:border-l md:border-t-0 md:px-8"
                 >
 
                     <strong
-                        class="counter block font-['Playfair_Display'] text-4xl font-medium"
+                        class="counter block font-['Playfair_Display'] text-4xl font-medium text-[#2D211C] lg:text-5xl"
                         data-target="7"
                     >
                         0
                     </strong>
 
                     <span
-                        class="text-[10px] uppercase tracking-[0.2em]"
+                        class="mt-2 block text-[9px] font-semibold uppercase tracking-[0.25em] text-[#766860]"
                     >
                         Days of Fresh Bakes
                     </span>
@@ -791,18 +812,21 @@
                 </div>
 
 
+
+                <!-- STAT 4 -->
+
                 <div
-                    class="reveal border-l border-[#2D211C]/20 py-5 text-center opacity-0"
+                    class="reveal border-l border-t border-[#2D211C]/10 px-4 py-6 text-center opacity-0 md:border-t-0 md:px-8"
                 >
 
                     <strong
-                        class="block font-['Playfair_Display'] text-3xl font-medium"
+                        class="block font-['Playfair_Display'] text-3xl font-medium italic text-[#B96F52] lg:text-4xl"
                     >
                         Laguna
                     </strong>
 
                     <span
-                        class="text-[10px] uppercase tracking-[0.2em]"
+                        class="mt-2 block text-[9px] font-semibold uppercase tracking-[0.25em] text-[#766860]"
                     >
                         Proudly Local
                     </span>
@@ -815,12 +839,12 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              PHILOSOPHY
-        ================================================== -->
+        ====================================================== -->
 
         <section
-            class="relative min-h-[650px] overflow-hidden"
+            class="relative min-h-[680px] overflow-hidden"
         >
 
             <img
@@ -831,7 +855,12 @@
 
 
             <div
-                class="reveal absolute bottom-8 right-[5%] w-[90%] max-w-lg bg-[#F7F0E7]/95 p-9 opacity-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:p-14"
+                class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#211814]/10"
+            ></div>
+
+
+            <div
+                class="reveal absolute bottom-8 right-[5%] w-[90%] max-w-lg bg-[#FFFDF9]/95 p-9 opacity-0 shadow-2xl backdrop-blur-sm md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:p-14"
             >
 
                 <span
@@ -841,16 +870,18 @@
                 </span>
 
                 <p
-                    class="font-['Playfair_Display'] text-2xl leading-relaxed md:text-3xl"
+                    class="mt-1 font-['Playfair_Display'] text-2xl leading-relaxed md:text-3xl"
                 >
                     The best things are rarely rushed. We believe good baking
                     starts with patience, care, and simple ingredients.
                 </p>
 
+                <div class="mt-7 h-px w-12 bg-[#D6A760]"></div>
+
                 <span
-                    class="mt-6 block text-[10px] uppercase tracking-[0.2em]"
+                    class="mt-5 block text-[9px] font-semibold uppercase tracking-[0.25em] text-[#766860]"
                 >
-                    — The LUNÉA Philosophy
+                    The LUNÉA Philosophy
                 </span>
 
             </div>
@@ -859,37 +890,45 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================================
              CTA
-        ================================================== -->
+        ====================================================== -->
 
-        <section class="bg-[#F7F0E7] py-24 lg:py-32">
+        <section class="relative overflow-hidden bg-[#F7F0E7] py-24 lg:py-32">
+
+
+            <!-- DECORATIVE CIRCLES -->
 
             <div
-                class="reveal mx-auto w-[90%] max-w-4xl text-center opacity-0"
+                class="pointer-events-none absolute -right-28 -top-28 size-80 rounded-full border border-[#B96F52]/10"
+            ></div>
+
+            <div
+                class="pointer-events-none absolute -right-8 top-0 size-52 rounded-full border border-[#D6A760]/20"
+            ></div>
+
+
+            <div
+                class="reveal relative mx-auto w-[90%] max-w-4xl text-center opacity-0"
             >
 
                 <div
-                    class="mb-5 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                    class="mb-5 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                 >
-
                     <span class="h-px w-9 bg-[#D6A760]"></span>
 
                     Visit · Order · Celebrate
-
                 </div>
 
 
                 <h2
                     class="font-['Playfair_Display'] text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl"
                 >
-
                     Something special deserves
 
                     <span class="block italic text-[#B96F52]">
                         something freshly made.
                     </span>
-
                 </h2>
 
 
@@ -903,7 +942,7 @@
 
 
                 <div
-                    class="mt-9 flex flex-col justify-center gap-4 sm:flex-row"
+                    class="mt-10 flex flex-col justify-center gap-4 sm:flex-row"
                 >
 
                     <a
@@ -917,7 +956,7 @@
 
                     <a
                         href="{{ url('/services') }}"
-                        class="inline-flex items-center justify-center border border-[#2D211C] px-7 py-4 text-sm font-semibold transition hover:bg-white"
+                        class="inline-flex items-center justify-center border border-[#2D211C] px-7 py-4 text-sm font-semibold transition duration-300 hover:bg-[#FFFDF9]"
                     >
                         Browse Our Creations
                     </a>
@@ -932,18 +971,18 @@
 
 
 
-    <!-- =================================================
+    <!-- =====================================================
          FOOTER
-    ================================================== -->
+    ====================================================== -->
 
-    <footer
-        class="bg-[#211814] pt-20 text-white/65"
-    >
+    <footer class="bg-[#211814] pt-20 text-white/65">
 
         <div
             class="mx-auto grid w-[90%] max-w-7xl gap-12 border-b border-white/10 pb-16 md:grid-cols-2 lg:grid-cols-4"
         >
 
+
+            <!-- BRAND -->
 
             <div>
 
@@ -954,7 +993,7 @@
                 </h2>
 
                 <p
-                    class="mt-2 font-['Playfair_Display'] italic text-[#E8C992]"
+                    class="mt-2 font-['Playfair_Display'] text-lg italic text-[#E8C992]"
                 >
                     Made Slowly. Enjoyed Fully.
                 </p>
@@ -968,17 +1007,19 @@
 
 
 
+            <!-- LINKS -->
+
             <div class="flex flex-col gap-3">
 
                 <h3
-                    class="mb-2 text-xs uppercase tracking-[0.2em] text-white"
+                    class="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
                 >
                     Explore
                 </h3>
 
                 <a
                     href="{{ url('/') }}"
-                    class="transition hover:text-[#D6A760]"
+                    class="text-[#D6A760]"
                 >
                     Home
                 </a>
@@ -1008,10 +1049,12 @@
 
 
 
+            <!-- VISIT -->
+
             <div>
 
                 <h3
-                    class="mb-5 text-xs uppercase tracking-[0.2em] text-white"
+                    class="mb-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
                 >
                     Visit
                 </h3>
@@ -1030,10 +1073,12 @@
 
 
 
+            <!-- SOCIAL -->
+
             <div class="flex flex-col gap-3">
 
                 <h3
-                    class="mb-2 text-xs uppercase tracking-[0.2em] text-white"
+                    class="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
                 >
                     Follow
                 </h3>
@@ -1065,7 +1110,7 @@
 
 
         <div
-            class="mx-auto flex w-[90%] max-w-7xl flex-col gap-2 py-7 text-[10px] uppercase tracking-[0.12em] md:flex-row md:justify-between"
+            class="mx-auto flex w-[90%] max-w-7xl flex-col gap-2 py-7 text-[9px] uppercase tracking-[0.14em] md:flex-row md:justify-between"
         >
 
             <p>
@@ -1083,49 +1128,46 @@
 
 
 
-    <!-- =================================================
-         JAVASCRIPT
-         Kept inside home.blade.php
-    ================================================== -->
+    <!-- =====================================================
+         INLINE JAVASCRIPT
+    ====================================================== -->
 
     <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* =============================================
-               ELEMENTS
-            ============================================== */
-
             const header = document.getElementById("header");
-
+            const brand = document.getElementById("brand");
             const logoMark = document.getElementById("logoMark");
 
-            const brand = document.getElementById("brand");
+            const navLinks =
+                document.querySelectorAll(".nav-link");
 
-            const navLinks = document.querySelectorAll(".nav-link");
+            const navButton =
+                document.getElementById("navButton");
 
-            const navButton = document.getElementById("navButton");
+            const menuToggle =
+                document.getElementById("menuToggle");
 
-            const menuToggle = document.getElementById("menuToggle");
+            const menuLines =
+                document.querySelectorAll(".menu-line");
 
-            const menuLines = document.querySelectorAll(".menu-line");
+            const mobileMenu =
+                document.getElementById("mobileMenu");
 
-            const mobileMenu = document.getElementById("mobileMenu");
-
-            const heroImage = document.getElementById("heroImage");
-
+            const heroImage =
+                document.getElementById("heroImage");
 
 
-            /* =============================================
+            /* =================================================
                NAVBAR SCROLL
-            ============================================== */
+            ================================================= */
 
             function updateNavbar() {
 
-                const isScrolled = window.scrollY > 60;
+                const scrolled = window.scrollY > 60;
 
-
-                if (isScrolled) {
+                if (scrolled) {
 
                     header.classList.add(
                         "bg-[#FFFDF9]/95",
@@ -1135,7 +1177,6 @@
 
 
                     brand.classList.remove("text-white");
-
                     brand.classList.add("text-[#2D211C]");
 
 
@@ -1150,26 +1191,22 @@
 
                     navLinks.forEach(function (link) {
 
-                        link.classList.remove(
-                            "text-white"
-                        );
+                        const active =
+                            link.classList.contains(
+                                "text-[#E8C992]"
+                            );
 
-                        link.classList.add(
-                            "text-[#2D211C]"
-                        );
+                        if (!active) {
 
-                    });
+                            link.classList.remove(
+                                "text-white"
+                            );
 
+                            link.classList.add(
+                                "text-[#2D211C]"
+                            );
 
-                    menuLines.forEach(function (line) {
-
-                        line.classList.remove(
-                            "bg-white"
-                        );
-
-                        line.classList.add(
-                            "bg-[#2D211C]"
-                        );
+                        }
 
                     });
 
@@ -1183,6 +1220,19 @@
                         "border-[#2D211C]",
                         "text-[#2D211C]"
                     );
+
+
+                    menuLines.forEach(function (line) {
+
+                        line.classList.remove(
+                            "bg-white"
+                        );
+
+                        line.classList.add(
+                            "bg-[#2D211C]"
+                        );
+
+                    });
 
                 }
 
@@ -1213,13 +1263,22 @@
 
                     navLinks.forEach(function (link) {
 
-                        link.classList.add(
-                            "text-white"
-                        );
+                        const active =
+                            link.classList.contains(
+                                "text-[#E8C992]"
+                            );
 
-                        link.classList.remove(
-                            "text-[#2D211C]"
-                        );
+                        if (!active) {
+
+                            link.classList.add(
+                                "text-white"
+                            );
+
+                            link.classList.remove(
+                                "text-[#2D211C]"
+                            );
+
+                        }
 
                     });
 
@@ -1235,9 +1294,13 @@
                     );
 
 
-                    if (
-                        !mobileMenu.classList.contains("right-0")
-                    ) {
+                    const menuOpen =
+                        mobileMenu.classList.contains(
+                            "right-0"
+                        );
+
+
+                    if (!menuOpen) {
 
                         menuLines.forEach(function (line) {
 
@@ -1268,9 +1331,9 @@
 
 
 
-            /* =============================================
-               HERO ENTRANCE ANIMATION
-            ============================================== */
+            /* =================================================
+               HERO ENTRANCE
+            ================================================= */
 
             const heroItems =
                 document.querySelectorAll(".hero-item");
@@ -1293,15 +1356,15 @@
                         "duration-700"
                     );
 
-                }, 250 + index * 170);
+                }, 220 + index * 160);
 
             });
 
 
 
-            /* =============================================
+            /* =================================================
                MOBILE MENU
-            ============================================== */
+            ================================================= */
 
             function closeMobileMenu() {
 
@@ -1314,8 +1377,9 @@
                 );
 
 
-                menuToggle.classList.remove(
-                    "menu-open"
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
                 );
 
 
@@ -1364,8 +1428,9 @@
                     );
 
 
-                    menuToggle.classList.add(
-                        "menu-open"
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "true"
                     );
 
 
@@ -1377,8 +1442,7 @@
                         "translateY(8px) rotate(45deg)";
 
 
-                    lines[1].style.opacity =
-                        "0";
+                    lines[1].style.opacity = "0";
 
 
                     lines[2].style.transform =
@@ -1415,9 +1479,9 @@
 
 
 
-            /* =============================================
+            /* =================================================
                SCROLL REVEAL
-            ============================================== */
+            ================================================= */
 
             const revealElements =
                 document.querySelectorAll(
@@ -1429,7 +1493,8 @@
 
                 element.classList.add(
                     "transition-all",
-                    "duration-700"
+                    "duration-700",
+                    "ease-out"
                 );
 
 
@@ -1453,7 +1518,7 @@
                 ) {
 
                     element.classList.add(
-                        "-translate-x-12"
+                        "-translate-x-10"
                     );
 
                 }
@@ -1466,7 +1531,7 @@
                 ) {
 
                     element.classList.add(
-                        "translate-x-12"
+                        "translate-x-10"
                     );
 
                 }
@@ -1480,66 +1545,56 @@
 
                     function (entries) {
 
-                        entries.forEach(
-                            function (entry) {
+                        entries.forEach(function (entry) {
 
-                                if (
-                                    entry.isIntersecting
-                                ) {
+                            if (entry.isIntersecting) {
 
-                                    entry.target.classList.remove(
-                                        "opacity-0",
-                                        "translate-y-10",
-                                        "-translate-x-12",
-                                        "translate-x-12"
-                                    );
+                                entry.target.classList.remove(
+                                    "opacity-0",
+                                    "translate-y-10",
+                                    "-translate-x-10",
+                                    "translate-x-10"
+                                );
 
 
-                                    entry.target.classList.add(
-                                        "opacity-100",
-                                        "translate-x-0",
-                                        "translate-y-0"
-                                    );
+                                entry.target.classList.add(
+                                    "opacity-100",
+                                    "translate-x-0",
+                                    "translate-y-0"
+                                );
 
 
-                                    revealObserver.unobserve(
-                                        entry.target
-                                    );
-
-                                }
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
 
                             }
-                        );
+
+                        });
 
                     },
 
                     {
-                        threshold: 0.15
+                        threshold: 0.12
                     }
 
                 );
 
 
-            revealElements.forEach(
-                function (element) {
+            revealElements.forEach(function (element) {
 
-                    revealObserver.observe(
-                        element
-                    );
+                revealObserver.observe(element);
 
-                }
-            );
+            });
 
 
 
-            /* =============================================
-               COUNTER ANIMATION
-            ============================================== */
+            /* =================================================
+               COUNTERS
+            ================================================= */
 
             const counters =
-                document.querySelectorAll(
-                    ".counter"
-                );
+                document.querySelectorAll(".counter");
 
 
             const statsSection =
@@ -1554,57 +1609,53 @@
             function animateCounter(counter) {
 
                 const target =
-                    Number(
-                        counter.dataset.target
-                    );
-
-
-                let current = 0;
+                    Number(counter.dataset.target);
 
 
                 const duration = 1200;
 
-                const intervalTime = 25;
-
-                const increment =
-                    target /
-                    (duration / intervalTime);
+                const startTime =
+                    performance.now();
 
 
-                const counterInterval =
-                    setInterval(
-                        function () {
+                function update(currentTime) {
 
-                            current += increment;
-
-
-                            if (
-                                current >= target
-                            ) {
-
-                                counter.textContent =
-                                    target;
+                    const elapsed =
+                        currentTime - startTime;
 
 
-                                clearInterval(
-                                    counterInterval
-                                );
+                    const progress =
+                        Math.min(
+                            elapsed / duration,
+                            1
+                        );
 
-                            }
 
-                            else {
+                    counter.textContent =
+                        Math.floor(
+                            target * progress
+                        );
 
-                                counter.textContent =
-                                    Math.floor(
-                                        current
-                                    );
 
-                            }
+                    if (progress < 1) {
 
-                        },
+                        requestAnimationFrame(
+                            update
+                        );
 
-                        intervalTime
-                    );
+                    }
+
+                    else {
+
+                        counter.textContent =
+                            target;
+
+                    }
+
+                }
+
+
+                requestAnimationFrame(update);
 
             }
 
@@ -1612,7 +1663,7 @@
 
             if (statsSection) {
 
-                const statsObserver =
+                const counterObserver =
                     new IntersectionObserver(
 
                         function (entries) {
@@ -1626,14 +1677,11 @@
 
 
                                 counters.forEach(
-                                    function (counter) {
-
-                                        animateCounter(
-                                            counter
-                                        );
-
-                                    }
+                                    animateCounter
                                 );
+
+
+                                counterObserver.disconnect();
 
                             }
 
@@ -1646,7 +1694,7 @@
                     );
 
 
-                statsObserver.observe(
+                counterObserver.observe(
                     statsSection
                 );
 
@@ -1654,32 +1702,53 @@
 
 
 
-            /* =============================================
-               HERO PARALLAX
-            ============================================== */
+            /* =================================================
+               SUBTLE HERO PARALLAX
+            ================================================= */
+
+            let ticking = false;
+
+
+            function updateParallax() {
+
+                if (!heroImage) {
+                    return;
+                }
+
+
+                const scroll =
+                    window.scrollY;
+
+
+                if (
+                    scroll <
+                    window.innerHeight
+                ) {
+
+                    heroImage.style.transform =
+                        "scale(1.10) translateY(" +
+                        scroll * 0.045 +
+                        "px)";
+
+                }
+
+
+                ticking = false;
+
+            }
+
 
             window.addEventListener(
                 "scroll",
                 function () {
 
-                    if (!heroImage) {
-                        return;
-                    }
+                    if (!ticking) {
 
+                        requestAnimationFrame(
+                            updateParallax
+                        );
 
-                    const scroll =
-                        window.scrollY;
-
-
-                    if (
-                        scroll <
-                        window.innerHeight
-                    ) {
-
-                        heroImage.style.transform =
-                            "scale(1.10) translateY(" +
-                            scroll * 0.06 +
-                            "px)";
+                        ticking = true;
 
                     }
 
