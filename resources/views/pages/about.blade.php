@@ -18,12 +18,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
         rel="stylesheet"
     >
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 
@@ -67,9 +68,9 @@
                     </span>
 
                     <span
-                        class="block text-[8px] tracking-[0.24em] opacity-80"
+                        class="block text-[8px] uppercase tracking-[0.24em] opacity-80"
                     >
-                        PÂTISSERIE & BAKEHOUSE
+                        Pâtisserie & Bakehouse
                     </span>
 
                 </div>
@@ -127,10 +128,13 @@
                 type="button"
                 class="relative z-[70] flex flex-col gap-1.5 lg:hidden"
                 aria-label="Toggle navigation"
+                aria-expanded="false"
             >
+
                 <span class="menu-line block h-0.5 w-7 bg-white transition-all"></span>
                 <span class="menu-line block h-0.5 w-7 bg-white transition-all"></span>
                 <span class="menu-line block h-0.5 w-7 bg-white transition-all"></span>
+
             </button>
 
         </div>
@@ -140,14 +144,25 @@
 
         <div
             id="mobileMenu"
-            class="fixed right-[-100%] top-0 z-[60] flex h-screen w-[80%] max-w-sm flex-col justify-center gap-7 bg-[#F7F0E7] px-10 text-[#2D211C] shadow-2xl transition-all duration-500 lg:hidden"
+            class="fixed right-[-100%] top-0 z-[60] flex h-screen w-[82%] max-w-sm flex-col justify-center gap-7 bg-[#F7F0E7] px-10 text-[#2D211C] shadow-2xl transition-all duration-500 lg:hidden"
         >
 
-            <p
-                class="mb-5 font-['Playfair_Display'] text-3xl tracking-[0.2em]"
-            >
-                LUNÉA
-            </p>
+            <div class="mb-5">
+
+                <p
+                    class="font-['Playfair_Display'] text-3xl tracking-[0.2em]"
+                >
+                    LUNÉA
+                </p>
+
+                <p
+                    class="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#766860]"
+                >
+                    Pâtisserie & Bakehouse
+                </p>
+
+            </div>
+
 
             <a
                 href="{{ url('/') }}"
@@ -156,12 +171,14 @@
                 Home
             </a>
 
+
             <a
                 href="{{ url('/about') }}"
                 class="mobile-link text-xl font-medium text-[#B96F52]"
             >
                 About
             </a>
+
 
             <a
                 href="{{ url('/services') }}"
@@ -170,12 +187,14 @@
                 Services
             </a>
 
+
             <a
                 href="{{ url('/contact') }}"
                 class="mobile-link text-xl font-medium"
             >
                 Contact
             </a>
+
 
             <a
                 href="{{ url('/contact') }}"
@@ -194,7 +213,7 @@
 
 
         <!-- =====================================================
-             ABOUT HERO
+             HERO
         ====================================================== -->
 
         <section
@@ -204,12 +223,12 @@
             <img
                 id="heroImage"
                 src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1800&q=85"
-                alt="Fresh pastries inside a bakery"
+                alt="Fresh artisan bread and pastries"
                 class="absolute inset-0 h-full w-full scale-110 object-cover"
             >
 
             <div
-                class="absolute inset-0 bg-gradient-to-r from-[#201510]/95 via-[#201510]/65 to-[#201510]/30"
+                class="absolute inset-0 bg-gradient-to-r from-[#201510]/95 via-[#201510]/68 to-[#201510]/25"
             ></div>
 
 
@@ -220,15 +239,16 @@
                 <div class="max-w-4xl">
 
                     <div
-                        class="hero-item mb-6 flex translate-y-8 items-center gap-4 text-xs uppercase tracking-[0.3em] text-[#E8C992] opacity-0"
+                        class="hero-item mb-6 flex translate-y-8 items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E8C992] opacity-0"
                     >
                         <span class="h-px w-10 bg-[#D6A760]"></span>
+
                         About LUNÉA
                     </div>
 
 
                     <h1
-                        class="hero-item translate-y-8 font-['Playfair_Display'] text-6xl font-medium leading-[0.95] tracking-tight opacity-0 sm:text-7xl lg:text-[7rem]"
+                        class="hero-item translate-y-8 font-['Playfair_Display'] text-6xl font-medium leading-[0.95] tracking-[-0.03em] opacity-0 sm:text-7xl lg:text-[7rem]"
                     >
                         More than baking.
 
@@ -264,13 +284,12 @@
                 class="mx-auto grid w-[90%] max-w-7xl items-center gap-16 lg:grid-cols-2 lg:gap-24"
             >
 
-
                 <!-- CONTENT -->
 
                 <div class="reveal-left opacity-0">
 
                     <div
-                        class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                        class="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                     >
                         <span class="h-px w-9 bg-[#D6A760]"></span>
 
@@ -320,17 +339,19 @@
                 </div>
 
 
-                <!-- IMAGE COMPOSITION -->
+                <!-- IMAGES -->
 
-                <div class="reveal-right relative min-h-[610px] opacity-0">
+                <div
+                    class="reveal-right relative min-h-[610px] opacity-0"
+                >
 
                     <div
                         class="absolute left-0 top-0 h-[520px] w-[82%] overflow-hidden"
                     >
 
                         <img
-                            src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&w=1000&q=85"
-                            alt="Warm bakery interior"
+                            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85"
+                            alt="Artisan bakery"
                             class="h-full w-full object-cover transition duration-700 hover:scale-105"
                         >
 
@@ -343,7 +364,7 @@
 
                         <img
                             src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
-                            alt="Freshly baked pastries"
+                            alt="Fresh pastries"
                             class="h-full w-full object-cover"
                         >
 
@@ -351,17 +372,17 @@
 
 
                     <div
-                        class="absolute bottom-12 left-4 bg-[#2D211C] px-7 py-6 text-white"
+                        class="absolute bottom-12 left-4 bg-[#2D211C] px-7 py-6 text-white shadow-xl"
                     >
 
                         <p
-                            class="font-['Playfair_Display'] text-3xl text-[#E8C992]"
+                            class="font-['Playfair_Display'] text-3xl italic text-[#E8C992]"
                         >
                             Santa Rosa
                         </p>
 
                         <p
-                            class="mt-1 text-[10px] uppercase tracking-[0.2em]"
+                            class="mt-1 text-[9px] uppercase tracking-[0.22em]"
                         >
                             Laguna · Philippines
                         </p>
@@ -378,16 +399,47 @@
 
         <!-- =====================================================
              MISSION & VISION
+             BLURRED BACKGROUND
         ====================================================== -->
 
-        <section class="bg-[#FFFDF9] py-24 lg:py-32">
+        <section
+            class="relative overflow-hidden py-24 lg:py-32"
+        >
 
-            <div class="mx-auto w-[90%] max-w-7xl">
+            <!-- BLURRED IMAGE BACKGROUND -->
 
-                <div class="reveal mb-16 max-w-3xl opacity-0">
+            <div
+                class="absolute inset-0 -z-20 scale-110 overflow-hidden"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1800&q=85"
+                    alt=""
+                    class="h-full w-full object-cover blur-[16px]"
+                >
+
+            </div>
+
+
+            <!-- LIGHT OVERLAY -->
+
+            <div
+                class="absolute inset-0 -z-10 bg-[#FFFDF9]/88 backdrop-blur-[2px]"
+            ></div>
+
+
+            <div
+                class="relative z-10 mx-auto w-[90%] max-w-7xl"
+            >
+
+                <!-- HEADING -->
+
+                <div
+                    class="reveal mb-16 max-w-3xl opacity-0"
+                >
 
                     <div
-                        class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                        class="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                     >
                         <span class="h-px w-9 bg-[#D6A760]"></span>
 
@@ -396,7 +448,7 @@
 
 
                     <h2
-                        class="font-['Playfair_Display'] text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl"
+                        class="font-['Playfair_Display'] text-5xl font-medium leading-tight sm:text-6xl"
                     >
                         Built around
 
@@ -408,47 +460,54 @@
                 </div>
 
 
+
+                <!-- CARDS -->
+
                 <div class="grid gap-8 lg:grid-cols-2">
 
 
                     <!-- MISSION -->
 
                     <article
-                        class="reveal group relative overflow-hidden bg-[#2D211C] p-10 text-white opacity-0 sm:p-14 lg:p-16"
+                        class="reveal relative min-h-[480px] overflow-hidden bg-[#2D211C]/95 p-10 text-white opacity-0 shadow-2xl backdrop-blur-md sm:p-14 lg:p-16"
                     >
 
                         <span
-                            class="absolute right-8 top-4 font-['Playfair_Display'] text-[8rem] leading-none text-white/[0.04]"
+                            class="absolute right-8 top-3 font-['Playfair_Display'] text-[8rem] leading-none text-white/[0.04]"
                         >
                             M
                         </span>
 
 
-                        <div class="relative">
+                        <div class="relative z-10">
 
-                            <span
-                                class="text-[10px] uppercase tracking-[0.25em] text-[#D6A760]"
+                            <p
+                                class="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#D6A760]"
                             >
                                 Our Mission
-                            </span>
+                            </p>
 
 
                             <h3
-                                class="mt-8 max-w-xl font-['Playfair_Display'] text-3xl font-medium leading-snug sm:text-4xl"
+                                class="mt-10 max-w-xl font-['Playfair_Display'] text-3xl font-medium leading-[1.15] sm:text-4xl"
                             >
                                 To make everyday moments feel a little more
                                 special through fresh and thoughtfully made pastries.
                             </h3>
 
 
-                            <p class="mt-7 max-w-xl leading-8 text-white/60">
+                            <p
+                                class="mt-8 max-w-xl text-sm leading-8 text-white/65"
+                            >
                                 We aim to create pastries that bring comfort,
                                 happiness, and memorable experiences to both
                                 everyday moments and meaningful celebrations.
                             </p>
 
 
-                            <div class="mt-10 h-px w-16 bg-[#D6A760]"></div>
+                            <div
+                                class="mt-10 h-px w-14 bg-[#D6A760]"
+                            ></div>
 
                         </div>
 
@@ -459,34 +518,36 @@
                     <!-- VISION -->
 
                     <article
-                        class="reveal group relative overflow-hidden bg-[#D6A760] p-10 opacity-0 sm:p-14 lg:p-16"
+                        class="reveal relative min-h-[480px] overflow-hidden bg-[#D6A760]/95 p-10 opacity-0 shadow-2xl backdrop-blur-md sm:p-14 lg:p-16"
                     >
 
                         <span
-                            class="absolute right-8 top-4 font-['Playfair_Display'] text-[8rem] leading-none text-[#2D211C]/[0.05]"
+                            class="absolute right-8 top-3 font-['Playfair_Display'] text-[8rem] leading-none text-[#2D211C]/[0.05]"
                         >
                             V
                         </span>
 
 
-                        <div class="relative">
+                        <div class="relative z-10">
 
-                            <span
-                                class="text-[10px] uppercase tracking-[0.25em] text-[#2D211C]/70"
+                            <p
+                                class="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#2D211C]/60"
                             >
                                 Our Vision
-                            </span>
+                            </p>
 
 
                             <h3
-                                class="mt-8 max-w-xl font-['Playfair_Display'] text-3xl font-medium leading-snug sm:text-4xl"
+                                class="mt-10 max-w-xl font-['Playfair_Display'] text-3xl font-medium leading-[1.15] sm:text-4xl"
                             >
-                                To become a well-loved local bakehouse
-                                known for quality, warmth, and creativity.
+                                To become a well-loved local bakehouse known
+                                for quality, warmth, and creativity.
                             </h3>
 
 
-                            <p class="mt-7 max-w-xl leading-8 text-[#2D211C]/70">
+                            <p
+                                class="mt-8 max-w-xl text-sm leading-8 text-[#2D211C]/65"
+                            >
                                 We envision LUNÉA becoming a familiar part of
                                 Laguna's community — a place people remember
                                 for good pastries, thoughtful service, and
@@ -494,7 +555,9 @@
                             </p>
 
 
-                            <div class="mt-10 h-px w-16 bg-[#2D211C]"></div>
+                            <div
+                                class="mt-10 h-px w-14 bg-[#2D211C]/60"
+                            ></div>
 
                         </div>
 
@@ -509,20 +572,22 @@
 
 
         <!-- =====================================================
-             PHILOSOPHY IMAGE
+             PHILOSOPHY
         ====================================================== -->
 
         <section
-            class="relative flex min-h-[600px] items-center overflow-hidden py-24"
+            class="relative flex min-h-[620px] items-center overflow-hidden py-24"
         >
 
             <img
-                src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1800&q=85"
-                alt="Baker preparing fresh pastries"
+                src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=1800&q=85"
+                alt="Pastry preparation"
                 class="absolute inset-0 h-full w-full object-cover"
             >
 
-            <div class="absolute inset-0 bg-[#211814]/65"></div>
+            <div
+                class="absolute inset-0 bg-[#211814]/70"
+            ></div>
 
 
             <div
@@ -539,7 +604,7 @@
 
 
                     <p
-                        class="-mt-5 font-['Playfair_Display'] text-3xl leading-relaxed sm:text-4xl lg:text-5xl"
+                        class="-mt-4 font-['Playfair_Display'] text-3xl leading-relaxed sm:text-4xl lg:text-5xl"
                     >
                         Good baking is not about rushing the result.
                         It is about giving every ingredient, every layer,
@@ -547,8 +612,13 @@
                     </p>
 
 
+                    <div
+                        class="mt-8 h-px w-14 bg-[#D6A760]"
+                    ></div>
+
+
                     <p
-                        class="mt-8 text-xs uppercase tracking-[0.25em] text-[#E8C992]"
+                        class="mt-5 text-[10px] uppercase tracking-[0.25em] text-[#E8C992]"
                     >
                         The LUNÉA Philosophy
                     </p>
@@ -565,17 +635,20 @@
              CORE VALUES
         ====================================================== -->
 
-        <section class="bg-[#F7F0E7] py-24 lg:py-32">
+        <section
+            class="bg-[#F7F0E7] py-24 lg:py-32"
+        >
 
-            <div class="mx-auto w-[90%] max-w-7xl">
-
+            <div
+                class="mx-auto w-[90%] max-w-7xl"
+            >
 
                 <div
                     class="reveal mx-auto mb-16 max-w-3xl text-center opacity-0"
                 >
 
                     <div
-                        class="mb-5 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                        class="mb-5 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                     >
                         <span class="h-px w-9 bg-[#D6A760]"></span>
 
@@ -602,23 +675,25 @@
                 >
 
 
-                    <!-- VALUE 1 -->
+                    <!-- 01 -->
 
                     <article
-                        class="reveal group bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white lg:min-h-[330px]"
+                        class="reveal group min-h-[330px] bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white"
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#B96F52] group-hover:text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-lg text-[#B96F52] transition group-hover:text-[#D6A760]"
                         >
                             01
                         </span>
+
 
                         <h3
                             class="mt-12 font-['Playfair_Display'] text-2xl font-medium"
                         >
                             Craftsmanship
                         </h3>
+
 
                         <p
                             class="mt-5 text-sm leading-7 text-[#766860] transition group-hover:text-white/60"
@@ -631,23 +706,25 @@
 
 
 
-                    <!-- VALUE 2 -->
+                    <!-- 02 -->
 
                     <article
-                        class="reveal group bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white lg:min-h-[330px]"
+                        class="reveal group min-h-[330px] bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white"
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#B96F52] group-hover:text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-lg text-[#B96F52] transition group-hover:text-[#D6A760]"
                         >
                             02
                         </span>
+
 
                         <h3
                             class="mt-12 font-['Playfair_Display'] text-2xl font-medium"
                         >
                             Quality
                         </h3>
+
 
                         <p
                             class="mt-5 text-sm leading-7 text-[#766860] transition group-hover:text-white/60"
@@ -660,23 +737,25 @@
 
 
 
-                    <!-- VALUE 3 -->
+                    <!-- 03 -->
 
                     <article
-                        class="reveal group bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white lg:min-h-[330px]"
+                        class="reveal group min-h-[330px] bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white"
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#B96F52] group-hover:text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-lg text-[#B96F52] transition group-hover:text-[#D6A760]"
                         >
                             03
                         </span>
+
 
                         <h3
                             class="mt-12 font-['Playfair_Display'] text-2xl font-medium"
                         >
                             Warmth
                         </h3>
+
 
                         <p
                             class="mt-5 text-sm leading-7 text-[#766860] transition group-hover:text-white/60"
@@ -689,23 +768,25 @@
 
 
 
-                    <!-- VALUE 4 -->
+                    <!-- 04 -->
 
                     <article
-                        class="reveal group bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white lg:min-h-[330px]"
+                        class="reveal group min-h-[330px] bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white"
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#B96F52] group-hover:text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-lg text-[#B96F52] transition group-hover:text-[#D6A760]"
                         >
                             04
                         </span>
+
 
                         <h3
                             class="mt-12 font-['Playfair_Display'] text-2xl font-medium"
                         >
                             Creativity
                         </h3>
+
 
                         <p
                             class="mt-5 text-sm leading-7 text-[#766860] transition group-hover:text-white/60"
@@ -718,17 +799,18 @@
 
 
 
-                    <!-- VALUE 5 -->
+                    <!-- 05 -->
 
                     <article
-                        class="reveal group bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white lg:min-h-[330px]"
+                        class="reveal group min-h-[330px] bg-[#FFFDF9] p-8 opacity-0 transition duration-300 hover:bg-[#2D211C] hover:text-white"
                     >
 
                         <span
-                            class="font-['Playfair_Display'] text-lg text-[#B96F52] group-hover:text-[#D6A760]"
+                            class="font-['Playfair_Display'] text-lg text-[#B96F52] transition group-hover:text-[#D6A760]"
                         >
                             05
                         </span>
+
 
                         <h3
                             class="mt-12 font-['Playfair_Display'] text-2xl font-medium"
@@ -736,11 +818,12 @@
                             Community
                         </h3>
 
+
                         <p
                             class="mt-5 text-sm leading-7 text-[#766860] transition group-hover:text-white/60"
                         >
-                            We want LUNÉA to become part of the everyday
-                            moments and celebrations of our local community.
+                            We want LUNÉA to become part of everyday moments
+                            and meaningful celebrations in our local community.
                         </p>
 
                     </article>
@@ -757,10 +840,13 @@
              TEAM
         ====================================================== -->
 
-        <section class="bg-[#FFFDF9] py-24 lg:py-32">
+        <section
+            class="bg-[#FFFDF9] py-24 lg:py-32"
+        >
 
-            <div class="mx-auto w-[90%] max-w-7xl">
-
+            <div
+                class="mx-auto w-[90%] max-w-7xl"
+            >
 
                 <div
                     class="reveal mb-16 flex flex-col justify-between gap-8 opacity-0 lg:flex-row lg:items-end"
@@ -769,7 +855,7 @@
                     <div class="max-w-3xl">
 
                         <div
-                            class="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
+                            class="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#B96F52]"
                         >
                             <span class="h-px w-9 bg-[#D6A760]"></span>
 
@@ -809,9 +895,13 @@
 
                     <!-- TEAM 1 -->
 
-                    <article class="reveal group opacity-0">
+                    <article
+                        class="reveal group opacity-0"
+                    >
 
-                        <div class="h-[430px] overflow-hidden bg-[#F7F0E7]">
+                        <div
+                            class="h-[430px] overflow-hidden bg-[#F7F0E7]"
+                        >
 
                             <img
                                 src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=85"
@@ -825,7 +915,7 @@
                         <div class="pt-6">
 
                             <p
-                                class="text-[10px] uppercase tracking-[0.2em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#B96F52]"
                             >
                                 Founder & Head Pastry Chef
                             </p>
@@ -836,7 +926,9 @@
                                 Elena Villanueva
                             </h3>
 
-                            <p class="mt-3 text-sm leading-7 text-[#766860]">
+                            <p
+                                class="mt-3 text-sm leading-7 text-[#766860]"
+                            >
                                 Leads LUNÉA's pastry development and maintains
                                 the quality and character of every creation.
                             </p>
@@ -849,9 +941,13 @@
 
                     <!-- TEAM 2 -->
 
-                    <article class="reveal group opacity-0">
+                    <article
+                        class="reveal group opacity-0"
+                    >
 
-                        <div class="h-[430px] overflow-hidden bg-[#F7F0E7]">
+                        <div
+                            class="h-[430px] overflow-hidden bg-[#F7F0E7]"
+                        >
 
                             <img
                                 src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=800&q=85"
@@ -865,7 +961,7 @@
                         <div class="pt-6">
 
                             <p
-                                class="text-[10px] uppercase tracking-[0.2em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#B96F52]"
                             >
                                 Bread & Viennoiserie Baker
                             </p>
@@ -876,7 +972,9 @@
                                 Marco Reyes
                             </h3>
 
-                            <p class="mt-3 text-sm leading-7 text-[#766860]">
+                            <p
+                                class="mt-3 text-sm leading-7 text-[#766860]"
+                            >
                                 Focuses on artisan breads, croissants,
                                 danishes, and other laminated pastries.
                             </p>
@@ -889,9 +987,13 @@
 
                     <!-- TEAM 3 -->
 
-                    <article class="reveal group opacity-0">
+                    <article
+                        class="reveal group opacity-0"
+                    >
 
-                        <div class="h-[430px] overflow-hidden bg-[#F7F0E7]">
+                        <div
+                            class="h-[430px] overflow-hidden bg-[#F7F0E7]"
+                        >
 
                             <img
                                 src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=85"
@@ -905,7 +1007,7 @@
                         <div class="pt-6">
 
                             <p
-                                class="text-[10px] uppercase tracking-[0.2em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#B96F52]"
                             >
                                 Cake Designer
                             </p>
@@ -916,7 +1018,9 @@
                                 Sofia Lim
                             </h3>
 
-                            <p class="mt-3 text-sm leading-7 text-[#766860]">
+                            <p
+                                class="mt-3 text-sm leading-7 text-[#766860]"
+                            >
                                 Creates LUNÉA's celebration cakes and
                                 personalized designs for special occasions.
                             </p>
@@ -929,9 +1033,13 @@
 
                     <!-- TEAM 4 -->
 
-                    <article class="reveal group opacity-0">
+                    <article
+                        class="reveal group opacity-0"
+                    >
 
-                        <div class="h-[430px] overflow-hidden bg-[#F7F0E7]">
+                        <div
+                            class="h-[430px] overflow-hidden bg-[#F7F0E7]"
+                        >
 
                             <img
                                 src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
@@ -945,7 +1053,7 @@
                         <div class="pt-6">
 
                             <p
-                                class="text-[10px] uppercase tracking-[0.2em] text-[#B96F52]"
+                                class="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#B96F52]"
                             >
                                 Customer Experience & Operations
                             </p>
@@ -956,7 +1064,9 @@
                                 Isabel Cruz
                             </h3>
 
-                            <p class="mt-3 text-sm leading-7 text-[#766860]">
+                            <p
+                                class="mt-3 text-sm leading-7 text-[#766860]"
+                            >
                                 Handles customer inquiries, orders, events,
                                 and the daily operations of the bakehouse.
                             </p>
@@ -982,11 +1092,11 @@
         >
 
             <div
-                class="absolute -right-24 -top-24 size-80 rounded-full border border-[#2D211C]/10"
+                class="pointer-events-none absolute -right-24 -top-24 size-80 rounded-full border border-[#2D211C]/10"
             ></div>
 
             <div
-                class="absolute -right-8 -top-8 size-52 rounded-full border border-[#2D211C]/10"
+                class="pointer-events-none absolute -right-8 -top-8 size-52 rounded-full border border-[#2D211C]/10"
             ></div>
 
 
@@ -995,7 +1105,7 @@
             >
 
                 <div
-                    class="mb-5 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#2D211C]/70"
+                    class="mb-5 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#2D211C]/70"
                 >
                     <span class="h-px w-9 bg-[#2D211C]"></span>
 
@@ -1037,7 +1147,7 @@
 
                     <a
                         href="{{ url('/contact') }}"
-                        class="inline-flex items-center justify-center border border-[#2D211C] px-7 py-4 text-sm font-semibold transition hover:bg-[#FFFDF9]"
+                        class="inline-flex items-center justify-center border border-[#2D211C] px-7 py-4 text-sm font-semibold transition duration-300 hover:bg-[#FFFDF9]"
                     >
                         Contact Us
                     </a>
@@ -1056,11 +1166,15 @@
          FOOTER
     ====================================================== -->
 
-    <footer class="bg-[#211814] pt-20 text-white/65">
+    <footer
+        class="bg-[#211814] pt-20 text-white/65"
+    >
 
         <div
             class="mx-auto grid w-[90%] max-w-7xl gap-12 border-b border-white/10 pb-16 md:grid-cols-2 lg:grid-cols-4"
         >
+
+            <!-- BRAND -->
 
             <div>
 
@@ -1071,12 +1185,14 @@
                 </h2>
 
                 <p
-                    class="mt-2 font-['Playfair_Display'] italic text-[#E8C992]"
+                    class="mt-2 font-['Playfair_Display'] text-lg italic text-[#E8C992]"
                 >
                     Made Slowly. Enjoyed Fully.
                 </p>
 
-                <p class="mt-5 max-w-sm text-sm leading-7">
+                <p
+                    class="mt-5 max-w-sm text-sm leading-7"
+                >
                     Fresh pastries, artisan breads, and handcrafted cakes
                     made with care in Santa Rosa, Laguna.
                 </p>
@@ -1085,10 +1201,12 @@
 
 
 
+            <!-- LINKS -->
+
             <div class="flex flex-col gap-3">
 
                 <h3
-                    class="mb-2 text-xs uppercase tracking-[0.2em] text-white"
+                    class="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
                 >
                     Explore
                 </h3>
@@ -1125,10 +1243,12 @@
 
 
 
+            <!-- VISIT -->
+
             <div>
 
                 <h3
-                    class="mb-5 text-xs uppercase tracking-[0.2em] text-white"
+                    class="mb-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
                 >
                     Visit
                 </h3>
@@ -1147,10 +1267,12 @@
 
 
 
+            <!-- SOCIAL -->
+
             <div class="flex flex-col gap-3">
 
                 <h3
-                    class="mb-2 text-xs uppercase tracking-[0.2em] text-white"
+                    class="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-white"
                 >
                     Follow
                 </h3>
@@ -1182,7 +1304,7 @@
 
 
         <div
-            class="mx-auto flex w-[90%] max-w-7xl flex-col gap-2 py-7 text-[10px] uppercase tracking-[0.12em] md:flex-row md:justify-between"
+            class="mx-auto flex w-[90%] max-w-7xl flex-col gap-2 py-7 text-[9px] uppercase tracking-[0.14em] md:flex-row md:justify-between"
         >
 
             <p>
@@ -1201,41 +1323,50 @@
 
 
     <!-- =====================================================
-         JAVASCRIPT
-         INLINE - NO SEPARATE JS FILE
+         INLINE JAVASCRIPT
     ====================================================== -->
 
     <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            const header = document.getElementById("header");
+            const header =
+                document.getElementById("header");
 
-            const brand = document.getElementById("brand");
+            const brand =
+                document.getElementById("brand");
 
-            const logoMark = document.getElementById("logoMark");
+            const logoMark =
+                document.getElementById("logoMark");
 
-            const navLinks = document.querySelectorAll(".nav-link");
+            const navLinks =
+                document.querySelectorAll(".nav-link");
 
-            const navButton = document.getElementById("navButton");
+            const navButton =
+                document.getElementById("navButton");
 
-            const menuToggle = document.getElementById("menuToggle");
+            const menuToggle =
+                document.getElementById("menuToggle");
 
-            const menuLines = document.querySelectorAll(".menu-line");
+            const menuLines =
+                document.querySelectorAll(".menu-line");
 
-            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenu =
+                document.getElementById("mobileMenu");
 
-            const heroImage = document.getElementById("heroImage");
+            const heroImage =
+                document.getElementById("heroImage");
 
 
-
-            /* =================================================
-               NAVBAR
-            ================================================= */
+            /* =============================================
+               NAVBAR SCROLL
+            ============================================== */
 
             function updateNavbar() {
 
-                const scrolled = window.scrollY > 60;
+                const scrolled =
+                    window.scrollY > 60;
+
 
                 if (scrolled) {
 
@@ -1246,9 +1377,13 @@
                     );
 
 
-                    brand.classList.remove("text-white");
+                    brand.classList.remove(
+                        "text-white"
+                    );
 
-                    brand.classList.add("text-[#2D211C]");
+                    brand.classList.add(
+                        "text-[#2D211C]"
+                    );
 
 
                     logoMark.classList.remove(
@@ -1262,7 +1397,12 @@
 
                     navLinks.forEach(function (link) {
 
-                        if (!link.classList.contains("text-[#E8C992]")) {
+                        const active =
+                            link.classList.contains(
+                                "text-[#E8C992]"
+                            );
+
+                        if (!active) {
 
                             link.classList.remove(
                                 "text-white"
@@ -1311,7 +1451,9 @@
                     );
 
 
-                    brand.classList.add("text-white");
+                    brand.classList.add(
+                        "text-white"
+                    );
 
                     brand.classList.remove(
                         "text-[#2D211C]"
@@ -1329,7 +1471,12 @@
 
                     navLinks.forEach(function (link) {
 
-                        if (!link.classList.contains("text-[#E8C992]")) {
+                        const active =
+                            link.classList.contains(
+                                "text-[#E8C992]"
+                            );
+
+                        if (!active) {
 
                             link.classList.add(
                                 "text-white"
@@ -1355,7 +1502,11 @@
                     );
 
 
-                    if (!mobileMenu.classList.contains("right-0")) {
+                    if (
+                        !mobileMenu.classList.contains(
+                            "right-0"
+                        )
+                    ) {
 
                         menuLines.forEach(function (line) {
 
@@ -1386,12 +1537,14 @@
 
 
 
-            /* =================================================
+            /* =============================================
                HERO ENTRANCE
-            ================================================= */
+            ============================================== */
 
             const heroItems =
-                document.querySelectorAll(".hero-item");
+                document.querySelectorAll(
+                    ".hero-item"
+                );
 
 
             heroItems.forEach(function (item, index) {
@@ -1411,33 +1564,41 @@
                         "duration-700"
                     );
 
-                }, 250 + index * 170);
+                }, 220 + index * 160);
 
             });
 
 
 
-            /* =================================================
+            /* =============================================
                MOBILE MENU
-            ================================================= */
+            ============================================== */
 
             function closeMobileMenu() {
 
-                mobileMenu.classList.remove("right-0");
+                mobileMenu.classList.remove(
+                    "right-0"
+                );
 
                 mobileMenu.classList.add(
                     "right-[-100%]"
                 );
 
 
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
                 const lines =
-                    menuToggle.querySelectorAll("span");
+                    menuToggle.querySelectorAll(
+                        "span"
+                    );
 
 
                 lines[0].style.transform = "";
-
                 lines[1].style.opacity = "";
-
                 lines[2].style.transform = "";
 
 
@@ -1461,52 +1622,59 @@
 
                         closeMobileMenu();
 
-                    }
-
-                    else {
-
-                        mobileMenu.classList.remove(
-                            "right-[-100%]"
-                        );
-
-                        mobileMenu.classList.add(
-                            "right-0"
-                        );
-
-
-                        const lines =
-                            menuToggle.querySelectorAll(
-                                "span"
-                            );
-
-
-                        lines[0].style.transform =
-                            "translateY(8px) rotate(45deg)";
-
-
-                        lines[1].style.opacity = "0";
-
-
-                        lines[2].style.transform =
-                            "translateY(-8px) rotate(-45deg)";
-
-
-                        lines.forEach(function (line) {
-
-                            line.classList.remove(
-                                "bg-white"
-                            );
-
-                            line.classList.add(
-                                "bg-[#2D211C]"
-                            );
-
-                        });
+                        return;
 
                     }
+
+
+                    mobileMenu.classList.remove(
+                        "right-[-100%]"
+                    );
+
+                    mobileMenu.classList.add(
+                        "right-0"
+                    );
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+
+                    const lines =
+                        menuToggle.querySelectorAll(
+                            "span"
+                        );
+
+
+                    lines[0].style.transform =
+                        "translateY(8px) rotate(45deg)";
+
+
+                    lines[1].style.opacity =
+                        "0";
+
+
+                    lines[2].style.transform =
+                        "translateY(-8px) rotate(-45deg)";
+
+
+                    lines.forEach(function (line) {
+
+                        line.classList.remove(
+                            "bg-white"
+                        );
+
+                        line.classList.add(
+                            "bg-[#2D211C]"
+                        );
+
+                    });
 
                 }
             );
+
 
 
             document
@@ -1522,9 +1690,9 @@
 
 
 
-            /* =================================================
+            /* =============================================
                SCROLL REVEAL
-            ================================================= */
+            ============================================== */
 
             const revealElements =
                 document.querySelectorAll(
@@ -1536,11 +1704,16 @@
 
                 element.classList.add(
                     "transition-all",
-                    "duration-700"
+                    "duration-700",
+                    "ease-out"
                 );
 
 
-                if (element.classList.contains("reveal")) {
+                if (
+                    element.classList.contains(
+                        "reveal"
+                    )
+                ) {
 
                     element.classList.add(
                         "translate-y-10"
@@ -1549,19 +1722,27 @@
                 }
 
 
-                if (element.classList.contains("reveal-left")) {
+                if (
+                    element.classList.contains(
+                        "reveal-left"
+                    )
+                ) {
 
                     element.classList.add(
-                        "-translate-x-12"
+                        "-translate-x-10"
                     );
 
                 }
 
 
-                if (element.classList.contains("reveal-right")) {
+                if (
+                    element.classList.contains(
+                        "reveal-right"
+                    )
+                ) {
 
                     element.classList.add(
-                        "translate-x-12"
+                        "translate-x-10"
                     );
 
                 }
@@ -1570,7 +1751,7 @@
 
 
 
-            const observer =
+            const revealObserver =
                 new IntersectionObserver(
 
                     function (entries) {
@@ -1578,13 +1759,15 @@
                         entries.forEach(
                             function (entry) {
 
-                                if (entry.isIntersecting) {
+                                if (
+                                    entry.isIntersecting
+                                ) {
 
                                     entry.target.classList.remove(
                                         "opacity-0",
                                         "translate-y-10",
-                                        "-translate-x-12",
-                                        "translate-x-12"
+                                        "-translate-x-10",
+                                        "translate-x-10"
                                     );
 
 
@@ -1595,7 +1778,7 @@
                                     );
 
 
-                                    observer.unobserve(
+                                    revealObserver.unobserve(
                                         entry.target
                                     );
 
@@ -1616,36 +1799,62 @@
             revealElements.forEach(
                 function (element) {
 
-                    observer.observe(element);
+                    revealObserver.observe(
+                        element
+                    );
 
                 }
             );
 
 
 
-            /* =================================================
-               SUBTLE HERO PARALLAX
-            ================================================= */
+            /* =============================================
+               HERO PARALLAX
+            ============================================== */
+
+            let ticking = false;
+
+
+            function updateParallax() {
+
+                if (!heroImage) {
+                    return;
+                }
+
+
+                const scroll =
+                    window.scrollY;
+
+
+                if (
+                    scroll <
+                    window.innerHeight
+                ) {
+
+                    heroImage.style.transform =
+                        "scale(1.10) translateY(" +
+                        scroll * 0.045 +
+                        "px)";
+
+                }
+
+
+                ticking = false;
+
+            }
+
 
             window.addEventListener(
                 "scroll",
                 function () {
 
-                    if (!heroImage) {
-                        return;
-                    }
+                    if (!ticking) {
 
+                        requestAnimationFrame(
+                            updateParallax
+                        );
 
-                    const scroll =
-                        window.scrollY;
-
-
-                    if (scroll < window.innerHeight) {
-
-                        heroImage.style.transform =
-                            "scale(1.10) translateY(" +
-                            scroll * 0.06 +
-                            "px)";
+                        ticking = true;
 
                     }
 
