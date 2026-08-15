@@ -471,7 +471,7 @@ Contains Laravel configuration files.
 ## Navigation Bar
 
 <p align="center">
-  <img src="screenshots/navbar.png" width="900" alt="LUNÉA Navigation Bar">
+  <img src="screenshots/navar.png" width="900" alt="LUNÉA Navigation Bar">
 </p>
 
 ---
